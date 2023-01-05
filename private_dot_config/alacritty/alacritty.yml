@@ -51,7 +51,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Fullscreen
 
 scrolling:
   # maximum number of lines in the scrollback buffer. Specifying '0' will
@@ -89,7 +89,7 @@ font:
     # style: "Medium Italic"
   
   # Point size of the font
-  size: 15.0
+  size: 13.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.

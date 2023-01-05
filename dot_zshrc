@@ -15,26 +15,32 @@ alias ide-v='tmux split-window -v -p 25'
 alias ide-h='tmux split-window -h'
 
 # fnm
-export PATH="$HOME/.local/share/fnm:$PATH"
-eval "`fnm env`"
+#export PATH="$HOME/.local/share/fnm:$PATH"
+#eval "`fnm env`"
 
 # neovim
 alias v='nvim'
+alias to='aria2c --seed-time=0 --file-allocation=none'
+alias citron='cd ~/desktop && ./citron.sh'
 
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/Library/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/android-studio/jre/bin
-export JAVA_HOME=$HOME/android-studio/jre
+export PATH=$PATH:/opt/rvm/bin:/opt/rvm/sbin
+
+fpath=(~/.zsh.d/ $fpath)
+
+
 
 # ibus
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
-eval "$(shellmark --out posix plug)"
+#eval "$(shellmark --out posix plug)"
 
 # go
 export GOBIN=/usr/local/go/bin
@@ -43,4 +49,9 @@ export PATH=$PATH:$GOBIN
 GO111MODULE=on
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH="$PATH:$HOME/.rvm/bin"
 

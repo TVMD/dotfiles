@@ -6,6 +6,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(git zsh-autosuggestions kubectl)
 source $ZSH/oh-my-zsh.sh
+source "$HOME/.openai.zsh"
 
 export PATH="$HOME/.serverless/bin:$PATH"
 
@@ -22,6 +23,7 @@ alias ide-h='tmux split-window -h'
 alias v='nvim'
 alias to='aria2c --seed-time=0 --file-allocation=none'
 alias citron='cd ~/desktop && ./citron.sh'
+alias super='yarn prettier && yarn build && code .'
 
 export ANDROID_HOME=$HOME/Library/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator

@@ -66,3 +66,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+--Chatgppt
+vim.keymap.set("n", "<leader>tk", "<cmd>:ChatGPT<CR>zz")
+vim.keymap.set("n", "<leader>tj", "<cmd>ChatGPTActAs<CR>zz")
+vim.keymap.set("n", "<leader>tt", "<cmd>ChatGPTEditWithInstructions<CR>zz")
+

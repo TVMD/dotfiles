@@ -13,6 +13,7 @@ vim.keymap.set("n", "<C-f>", ":NvimTreeFindFile<CR>")
 vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 
 require("nvim-tree").setup({
+  open_on_setup = true,
   sort_by = "case_sensitive",
   view = {
     adaptive_size = true,
@@ -28,6 +29,6 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })

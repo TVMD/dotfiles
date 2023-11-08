@@ -31,3 +31,10 @@ vim.opt.termguicolors = true
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = 'menuone,noselect'
 
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.wo.relativenumber = true
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
